@@ -1,0 +1,8 @@
+[
+  {
+    "name": "getIP",
+    "files": [
+      "getip/ip.php"
+    ]
+  }
+]

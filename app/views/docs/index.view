@@ -1,0 +1,47 @@
+<section class="main">
+	<div class="row">
+		<h2>mPHP - Michael's PHP MVC Framework</h2>
+		<h4>An Introduction</h4>
+	</div>
+	<div class="row">
+		<h3 id="about">About mPHP</h3>
+		<p>
+			I (<a href="https://github.com/mvinc17" target="_blank">Michael</a>) created mPHP as a MVC (Model View Controller) framework
+			written in PHP, is supports several features which are especially useful when developing an application,
+			including:
+		</p>
+		<ul>
+			<li>Automatic routing (with overrides)</li>
+			<li>Inline PHP within views</li>
+			<li>Automatic SCSS compilation</li>
+			<li>Automatic CSS and JS minification</li>
+			<li>Easy inclusions of libraries</li>
+			<li>Separate directory for the app and publicly accessible files</li>
+		</ul>
+		<p>
+			mPHP was not designed as a replacement for any existing MVC frameworks, but as something which would be easy
+			to learn and use, and is designed to facilitate rapid design cycles.
+		</p>
+	</div>
+	<div class="row">
+		<h3 id="add-controller">Adding a Controller</h3>
+		<p>
+			A controller is a <a href="http://php.net/manual/en/language.oop5.basic.php" target="_blank">class</a> which
+			hosts methods which can be called from the URL which is accessed. For example, if you were to navigate to
+			<pre>/docs/action</pre>, the <pre>docs</pre> class would be instantiated, and the <pre>action</pre> method
+			would be called. If there is no method specified in the URL, or if the method specified in the URL does not
+			exist or is not publicly callable, then the <pre>index</pre> method is called instead.
+		</p>
+		<p>
+			Adding a controller is simple, just:
+		</p>
+		<ul>
+			<li>Add a new PHP Class in the <pre>app/controllers/</pre> directory, with the same name and class name as
+			the url which you intend to call it with.</li>
+			<li>Add a method within the class called <pre>index</pre>, as well as one for each action which you wish to use.</li>
+		</ul>
+	</div>
+	<div class="row">
+		<h3 id="add-view">Adding a View</h3>
+	</div>
+</section>

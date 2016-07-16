@@ -1,0 +1,10 @@
+[
+  {
+    "name"    : "scssphp",
+    "desc"    : "SASS Compiler for PHP",
+    "url"     : "http://leafo.net/scssphp/",
+    "files"   : [
+      "scssphp/scss.inc.php"
+    ]
+  }
+]

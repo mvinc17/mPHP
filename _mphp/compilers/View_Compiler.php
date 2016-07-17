@@ -17,44 +17,59 @@ class View_Compiler extends Compiler
 	}
 
 	public function compile() {
-		$template = $this->compileTemplate(file_get_contents(APP_PATH.'/views/'.$this->partialView.'.view'), file_get_contents(APP_PATH.'/views/'.ROUTE_CONTROLLER.'/'.ROUTE_VIEW.'.view'));
-		echo $template->saveHTML();
+		ob_start();
+		include(APP_PATH.'/views/'.$this->partialView.'.phtml');
+		$partialView = ob_get_clean();
+
+		ob_start();
+		include(APP_PATH.'/views/'.ROUTE_CONTROLLER.'/'.ROUTE_VIEW.'.phtml');
+		$view = ob_get_clean();
+
+
+
+		$template = $this->compileTemplate($partialView, $view);
+		echo $template;
 	}
 
 	private function compileTemplate($container, $view) {
-		$dom = new domDocument();
-		$dom->loadHTML($container);
 
-		$dom->preserveWhiteSpace = false;
+		$container = str_replace('<div class="container" id="mPHP-Content">', '<div class="container" id="mPHP-Content">'.$view, $container);
 
-		$content = $dom->getElementById(VIEW_CONTAINER_ID);
+		return $container;
+
+//		$dom = new domDocument();
+//		$dom->loadHTML($container);
+//
+//		$dom->preserveWhiteSpace = false;
+//
+//		$content = $dom->getElementById("mPHP-Content");
 
 		//<php> tags in the template
-		$evalTags = $dom->getElementsByTagName("php");
-		foreach($evalTags as $tag) {
-			//var_dump($tag);
-			$newVal = eval('return '.$tag->nodeValue);
-			$tag->nodeValue = '';
+		//$evalTags = $dom->getElementsByTagName("php");
+//		foreach($evalTags as $tag) {
+//			//var_dump($tag);
+//			$newVal = eval('return '.$tag->nodeValue);
+//			$tag->nodeValue = '';
+//
+//			$newNode = $dom->createElement("span", $newVal);
+//			$tag->parentNode->replaceChild($newNode, $tag);
+//		}
 
-			$newNode = $dom->createElement("span", $newVal);
-			$tag->parentNode->replaceChild($newNode, $tag);
-		}
-
-		$viewDoc = new domDocument();
-		$viewDoc->loadHTML($view);
-		//<php> tags in the view
-		$evalTags = $viewDoc->getElementsByTagName("php");
-		foreach($evalTags as $tag) {
-			//var_dump($tag);
-			$newVal = eval('return '.$tag->nodeValue);
-			$tag->nodeValue = '';
-
-			$newNode = $viewDoc->createElement("span", $newVal);
-			$tag->parentNode->replaceChild($newNode, $tag);
-		}
-		$viewNode = $viewDoc->getElementsByTagName("body")->item(0);
-		$node = $dom->importNode($viewNode, true);
-		$content->appendChild($node);
+//		$viewDoc = new domDocument();
+//		$viewDoc->loadHTML($view);
+//		//<php> tags in the view
+//		$evalTags = $viewDoc->getElementsByTagName("php");
+////		foreach($evalTags as $tag) {
+////			//var_dump($tag);
+////			$newVal = eval('return '.$tag->nodeValue);
+////			$tag->nodeValue = '';
+////
+////			$newNode = $viewDoc->createElement("span", $newVal);
+////			$tag->parentNode->replaceChild($newNode, $tag);
+////		}
+//		$viewNode = $viewDoc->getElementsByTagName("body")->item(0);
+//		$node = $dom->importNode($viewNode, true);
+//		$content->appendChild($node);
 
 
 
@@ -70,6 +85,6 @@ class View_Compiler extends Compiler
 //			$newNode = $dom->createElement("span", $newVal);
 //			$tag->parentNode->replaceChild($newNode, $tag);
 //		}
-		return $dom;
+		//return $dom;
 	}
 }

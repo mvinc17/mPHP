@@ -43,5 +43,56 @@
 	</div>
 	<div class="row">
 		<h3 id="add-view">Adding a View</h3>
+		<p>
+			A view is a file which contains HTML and PHP code, which is eventually rendered and sent to thr browser. Views
+			have the file extension <pre>.phtml</pre>, because they contain PHP within HTML. Views are the last files to be
+			loaded and interpreted when a page is requested.
+		</p>
+		<p>
+			To add a view, you must:
+		</p>
+		<ul>
+			<li>Add a method in the appropriate <a href="#add-controller">controller</a> with the same name as the view
+				which you are creating. If you are creating an index view, use the name <pre>index.</pre></li>
+			<li>Create a file in the <pre>views</pre> folder, in the subdirectory with the same name as the controller.</li>
+		</ul>
+	</div>
+	<div class="row">
+		<h3 id="add-asset">Adding an Asset</h3>
+		<p>
+			When using mPHP in development mode, when a request is made to the server, the application automatically compiles
+			and minifies all of the SCSS and Javascript files in the <pre>app/assets/</pre> directory. It then places the compiled
+			and minified versions into the <pre>public/assets/</pre> directory, so they can be accessed by the client.
+			To add an asset, you just have to place it in the <pre>app/assets/</pre> directory, and it will be automatically
+			compiled.
+		</p>
+	</div>
+	<div class="row">
+		<h3 id="controls">Adding a Control</h3>
+		<p>
+			Controls are reusable code snippets, designed to allow for maximum code reuse. They are called using the <pre>control()</pre>
+			function, like so: <pre>control("HelloWorld");</pre>
+		</p>
+		<p>
+			Which results in
+		</p>
+		<p>
+			<?php control("HelloWorld"); ?>
+		</p>
+		<p>
+			A control is a class with the following basic structure:
+			<br/>
+			<pre style="display: block; text-align: left">
+
+class HelloWorld
+{
+	public function view() {
+		echo '&lt;h3&gt;Hello, World!&lt;/h3&gt;';
+	}
+}
+			</pre>
+		<br/>
+		When the control is rendered, the <pre>view()</pre> method is called.
+		</p>
 	</div>
 </section>

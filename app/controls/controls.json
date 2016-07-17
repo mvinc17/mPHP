@@ -4,5 +4,11 @@
     "files": [
       "getip/ip.php"
     ]
+  },
+  {
+    "name": "HelloWorld",
+    "files": [
+      "helloworld/HelloWorld.php"
+    ]
   }
 ]

@@ -8,7 +8,6 @@
 
 
 define("mPHP_PATH", '/Users/Michael/Documents/Dev/mPHP');
-
 define("APP_PATH", mPHP_PATH.'/app');
 define("PUB_PATH", mPHP_PATH.'/public');
 

@@ -79,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrapper.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bootstrapper.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bootstrapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-230">
-              <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+            <state relative-caret-position="370">
+              <caret line="98" column="124" selection-start-line="98" selection-start-column="124" selection-end-line="98" selection-end-column="124" />
               <folding>
                 <element signature="e#6#88#0#PHP" expanded="true" />
               </folding>
@@ -91,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template.phtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="template.phtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/partial/template.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="745">
-              <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+            <state relative-caret-position="540">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -142,13 +142,13 @@
         <option value="$PROJECT_DIR$/_mphp/router.php" />
         <option value="$PROJECT_DIR$/app/views/root/index.view" />
         <option value="$PROJECT_DIR$/app/assets/scss/base.scss" />
-        <option value="$PROJECT_DIR$/bootstrapper.php" />
         <option value="$PROJECT_DIR$/app/views/docs/index.view" />
         <option value="$PROJECT_DIR$/_mphp/compilers/View_Compiler.php" />
         <option value="$PROJECT_DIR$/app/controls/helloworld/HelloWorld.php" />
         <option value="$PROJECT_DIR$/app/controls/controls.json" />
         <option value="$PROJECT_DIR$/app/views/docs/index.phtml" />
         <option value="$PROJECT_DIR$/app/views/partial/template.phtml" />
+        <option value="$PROJECT_DIR$/bootstrapper.php" />
       </list>
     </option>
   </component>
@@ -523,12 +523,12 @@
       <updated>1468572554670</updated>
       <workItem from="1468572556227" duration="5547000" />
       <workItem from="1468620297106" duration="7133000" />
-      <workItem from="1468639992209" duration="13018000" />
+      <workItem from="1468639992209" duration="13622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25698000" />
+    <option name="totallyTimeSpent" value="26302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1128" extended-state="6" />
@@ -798,7 +798,7 @@
         <state relative-caret-position="-75">
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
           <folding>
-            <marker date="1468727557000" expanded="true" signature="2:4" ph="/*...*/" />
+            <marker date="1468728123000" expanded="true" signature="2:4" ph="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -915,16 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_mphp/compilers/View_Compiler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -974,9 +964,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partial/template.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+        <state relative-caret-position="540">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="98" column="124" selection-start-line="98" selection-start-column="124" selection-end-line="98" selection-end-column="124" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
